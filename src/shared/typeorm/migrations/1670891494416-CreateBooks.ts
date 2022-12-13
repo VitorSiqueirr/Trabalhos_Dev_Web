@@ -4,7 +4,7 @@ export class CreateBooks1670891494416 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: "products",
+        name: "books",
         columns: [
           {
             name: "id",
@@ -20,9 +20,8 @@ export class CreateBooks1670891494416 implements MigrationInterface {
           { name: "publishing_company", type: "varchar" },
           { name: "genre", type: "varchar" },
           { name: "sub_genre", type: "varchar" },
-          { name: "price", type: "int", precision: 10, scale: 2},
+          { name: "price", type: "decimal", precision: 10, scale: 2},
           { name: "quantity", type: "int" },
-          //foto
           { name: "release_date", type: "timestamp" },
           { name: "created_at", type: "timestamp", default: "now()" },
           { name: "updated_at", type: "timestamp", default: "now()" },
@@ -32,6 +31,6 @@ export class CreateBooks1670891494416 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable("products");
+    await queryRunner.dropTable("books");
   }
 }
