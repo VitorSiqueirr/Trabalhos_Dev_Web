@@ -6,7 +6,9 @@ import BookRepository from "../typeorm/repositories/BookRepository";
 interface IRequest {
   name: string;
   author: string;
+  cover: string;
   edition: number;
+  language: string;
   pages: number;
   publishing_company: string;
   genre: string;
@@ -20,7 +22,9 @@ export default class CreateBookService {
   public async execute({
     name,
     author,
+    cover,
     edition,
+    language,
     pages,
     publishing_company,
     genre,
@@ -38,7 +42,9 @@ export default class CreateBookService {
     const book = bookRepository.create({
       name,
       author,
+      cover,
       edition,
+      language,
       pages,
       publishing_company,
       genre,

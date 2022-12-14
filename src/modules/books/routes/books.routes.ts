@@ -14,7 +14,9 @@ booksRouter.post("/",celebrate({
     [Segments.BODY]: {
         name: Joi.string().required(),
         author: Joi.string().required(),
+        cover: Joi.string().required(),
         edition: Joi.number().min(1).max(50).required(),
+        language: Joi.string().required(),
         pages: Joi.number().min(1).max(10000).required(),
         publishing_company: Joi.string().required(),
         genre: Joi.string().required(),
@@ -30,7 +32,9 @@ booksRouter.put("/:id",celebrate({
     [Segments.BODY]: {
         name: Joi.string().required(),
         author: Joi.string().required(),
+        cover: Joi.string().required(),
         edition: Joi.number().min(1).max(50).required(),
+        language: Joi.string().required(),
         pages: Joi.number().min(1).max(10000).required(),
         publishing_company: Joi.string().required(),
         genre: Joi.string().required(),

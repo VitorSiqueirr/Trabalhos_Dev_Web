@@ -14,7 +14,11 @@ export default class Book {
   @Column()
   author: string;
   @Column()
+  cover: string;
+  @Column("int")
   edition: number;
+  @Column()
+  language: string;
   @Column("int")
   pages: number;
   @Column()

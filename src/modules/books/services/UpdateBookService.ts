@@ -7,7 +7,9 @@ interface IRequest {
   id: string;
   name: string;
   author: string;
+  cover: string;
   edition: number;
+  language: string;
   pages: number;
   publishing_company: string;
   genre: string;
@@ -22,7 +24,9 @@ export default class UpdateBookService {
     id,
     name,
     author,
+    cover,
     edition,
+    language,
     pages,
     publishing_company,
     genre,
@@ -44,7 +48,9 @@ export default class UpdateBookService {
 
     book.name = name;
     book.author = author;
+    book.cover = cover;
     book.edition = edition;
+    book.language = language;
     book.pages = pages;
     book.publishing_company = publishing_company;
     book.genre = genre;
