@@ -5,7 +5,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 
-@Entity("products")
+@Entity("books")
 export default class Book {
   @PrimaryGeneratedColumn("uuid")
   id: string;

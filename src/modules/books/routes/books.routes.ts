@@ -36,7 +36,7 @@ booksRouter.put("/:id",celebrate({
         genre: Joi.string().required(),
         sub_genre: Joi.string().required(),
         price: Joi.number().min(0).precision(2).required(),
-        quantity: Joi.number().min(1).max(5).required(),
+        quantity: Joi.number().min(1).max(50).required(),
         release_date: Joi.date().required(),
     }
 }),booksConstroller.update
